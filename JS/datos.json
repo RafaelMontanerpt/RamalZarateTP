@@ -1,0 +1,26 @@
+[
+  {
+    "franja": "05:00 - 09:00",
+    "pico": "15 min",
+    "valle": "20 min",
+    "destino": "Retiro ↔ Zárate"
+  },
+  {
+    "franja": "09:00 - 17:00",
+    "pico": "20 min",
+    "valle": "30 min",
+    "destino": "Retiro ↔ Zárate"
+  },
+  {
+    "franja": "17:00 - 21:00",
+    "pico": "15 min",
+    "valle": "20 min",
+    "destino": "Retiro ↔ Zárate"
+  },
+  {
+    "franja": "21:00 - 01:00",
+    "pico": "25 min",
+    "valle": "40 min",
+    "destino": "Retiro ↔ Zárate"
+  }
+]

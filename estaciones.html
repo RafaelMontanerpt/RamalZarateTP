@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horarios y estaciones — Ramal Zárate</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <img src="img/logo-mitre.png" alt="Ramal Zárate" class="nav-logo">
+            <div class="marca">
+                Ramal Zárate
+                <small>Línea Mitre</small>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="estaciones.html">Horarios</a></li>
+                <li><a href="ubicacion.html">Estaciones</a></li>
+                <li id="nav-sube"><a href="sube.html">SUBE</a></li>
+                <li id="nav-central"><a href="https://rafaelmontanerpt.github.io/Central-de-transporte/index.html" target="_blank">← Línea Mitre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="buscador-hero">
+            <div class="buscador-hero-inner">
+                <h1>Planificá tu viaje</h1>
+                <p>Buscá una estación de origen y destino para ver el recorrido, el tiempo de viaje y el próximo tren.</p>
+            </div>
+        </section>
+
+        <section class="franja franja--ajustada" style="padding-top:0">
+            <div class="caja-busqueda">
+                <input type="text" placeholder="Desde dónde salís" id="origen">
+                <input type="text" placeholder="A dónde vas" id="destino">
+                <button onclick="buscarRecorrido()">Buscar</button>
+            </div>
+
+            <div class="resultado-viaje">
+                <div class="trayecto">
+                    <div class="trayecto-parada terminal">
+                        <span class="punto"></span>
+                        <b>Retiro</b>
+                    </div>
+                    <div class="trayecto-tramo"></div>
+                    <div class="trayecto-parada">
+                        <span class="punto"></span>
+                        <b>Belgrano C</b>
+                    </div>
+                    <div class="trayecto-tramo"></div>
+                    <div class="trayecto-parada">
+                        <span class="punto"></span>
+                        <b>San Isidro</b>
+                    </div>
+                    <div class="trayecto-tramo"></div>
+                    <div class="trayecto-parada terminal">
+                        <span class="punto"></span>
+                        <b>Escobar</b>
+                    </div>
+                </div>
+
+                <div class="datos-viaje">
+                    <div class="dato-viaje"><span>Tiempo de viaje</span><b>1h 35m</b></div>
+                    <div class="dato-viaje"><span>Próximo tren</span><b>12 min</b></div>
+                    <div class="dato-viaje"><span>Estado</span><b style="color:var(--verde)">Normal</b></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="franja franja--ajustada">
+            <span class="ojo">Los tres ramales</span>
+            <h2>Ramales de la línea</h2>
+
+            <div class="lista-ramales">
+                <div class="fila-ramal">
+                    <h3>Ramal Tigre</h3>
+                    <span class="trazado">Retiro → Belgrano C → Olivos → San Isidro → Tigre</span>
+                    <a href="estaciones.html" class="enlace-ramal">Ver recorrido →</a>
+                </div>
+                <div class="fila-ramal">
+                    <h3>Ramal José León Suárez</h3>
+                    <span class="trazado">Retiro → Villa Ballester → José León Suárez</span>
+                    <a href="estaciones.html" class="enlace-ramal">Ver recorrido →</a>
+                </div>
+                <div class="fila-ramal">
+                    <h3>Ramal Zárate</h3>
+                    <span class="trazado">Villa Ballester → Escobar → Campana → Zárate</span>
+                    <a href="#ramal-zarate" class="enlace-ramal">Ver recorrido →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="ramal-hero" id="ramal-zarate">
+            <div class="ramal-hero-inner">
+                <div class="ramal-kicker">Ramal · Tracción diésel</div>
+                <h1>Zárate</h1>
+                <p>El tramo que sigue a la línea eléctrica cuando se acaba: une Villa Ballester con la zona industrial y portuaria de Zárate y Campana, atravesando Tigre y Escobar en el camino.</p>
+                <div class="ramal-botones">
+                    <a href="#frecuencias-zarate" class="btn">Ver frecuencias</a>
+                    <a href="ubicacion.html" class="btn-fantasma-oscuro">Ver estaciones</a>
+                </div>
+                <div class="ramal-cifras">
+                    <div><b>70 km</b><span>de recorrido</span></div>
+                    <div><b>1h 45m</b><span>punta a punta</span></div>
+                    <div><b>5</b><span>partidos conectados</span></div>
+                    <div><b>60-90'</b><span>frecuencia pico</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="franja">
+            <div class="carrusel">
+                <img class="activa" src="img/J31_597_Bf_Retiro_Mitre.jpg" alt="Formación de la Línea Mitre">
+                <img src="img/puente-zarate.avif" alt="Puente Zárate-Brazo Largo">
+                <img src="img/zarate-plaza.avif" alt="Plaza central de Zárate">
+                <button class="carrusel-control carrusel-control--prev" onclick="moverCarrusel(-1)">‹</button>
+                <button class="carrusel-control carrusel-control--next" onclick="moverCarrusel(1)">›</button>
+            </div>
+        </section>
+
+        <section class="franja franja--ajustada">
+            <span class="ojo">En el camino</span>
+            <h2 style="margin-bottom:50px">Lo que vas a encontrar</h2>
+
+            <div class="destino-bloque">
+                <div class="destino-texto">
+                    <span class="destino-num">Km 33</span>
+                    <h3>Escobar</h3>
+                    <p>El centro comercial del corredor norte. Acá se combina con varias líneas de colectivo que entran al casco urbano, así que es parada habitual para trasbordo.</p>
+                </div>
+                <div class="destino-foto" style="display:flex;align-items:center;justify-content:center;background:var(--carbon)">
+                    <span style="font-family:var(--display);color:var(--hueso);font-size:1.4rem;text-align:center;padding:0 20px">ESTACIÓN<br>ESCOBAR</span>
+                </div>
+            </div>
+
+            <div class="destino-bloque invertido">
+                <div class="destino-texto">
+                    <span class="destino-num">Km 55</span>
+                    <h3>Campana</h3>
+                    <p>El polo industrial del ramal. Concentra plantas siderúrgicas y automotrices, y buena parte de los pasajeros del tramo final viajan hacia o desde acá por trabajo.</p>
+                </div>
+                <div class="destino-foto" style="display:flex;align-items:center;justify-content:center;background:var(--carbon-2)">
+                    <span style="font-family:var(--display);color:var(--hueso);font-size:1.4rem;text-align:center;padding:0 20px">ESTACIÓN<br>CAMPANA</span>
+                </div>
+            </div>
+
+            <div class="destino-bloque">
+                <div class="destino-texto">
+                    <span class="destino-num">Km 70</span>
+                    <h3>Zárate</h3>
+                    <p>Punta final del ramal. Desde la estación se llega caminando al centro y al puente Zárate-Brazo Largo, el cruce que conecta con Entre Ríos.</p>
+                </div>
+                <div class="destino-foto">
+                    <img src="img/puente-zarate.avif" alt="Puente Zárate-Brazo Largo">
+                </div>
+            </div>
+        </section>
+
+        <section class="franja franja--ajustada bloque-tabla" id="frecuencias-zarate">
+            <span class="ojo">Frecuencias</span>
+            <h2>Cada cuánto pasa el tren</h2>
+            <p>Al ser un servicio diésel, las formaciones circulan con frecuencias más amplias que el resto de la línea. En hora pico el intervalo baja a entre 15 y 25 minutos; el resto del día se extiende hasta los 40.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Franja horaria</th>
+                        <th>Frecuencia pico</th>
+                        <th>Frecuencia valle</th>
+                        <th>Destino</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section class="tira-conectividad">
+            <div class="franja franja--ajustada">
+                <span class="ojo">Combinaciones</span>
+                <h2>SUBE y conectividad</h2>
+                <p style="max-width:680px;color:#5c5c59">El pasaje se paga únicamente con tarjeta SUBE. Si combinás este ramal con la Línea 60 en Pacheco o Escobar, dentro de las dos horas siguientes el segundo boleto sale con 50% de descuento.</p>
+
+                <div class="tarjetas-conectividad">
+                    <div class="tarjeta-conectividad">
+                        <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                        <h3>Tarjeta SUBE</h3>
+                        <p>Único medio de pago habilitado en los tres ramales.</p>
+                    </div>
+                    <div class="tarjeta-conectividad">
+                        <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="11" rx="2"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg>
+                        <h3>Combinación con colectivo</h3>
+                        <p>50% de descuento en el segundo viaje con la Línea 60.</p>
+                    </div>
+                    <div class="tarjeta-conectividad">
+                        <svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="10" r="3"/><path d="M12 21s7-7.5 7-12a7 7 0 1 0-14 0c0 4.5 7 12 7 12Z"/></svg>
+                        <h3>Centros de carga</h3>
+                        <p>Puntos SUBE en todas las estaciones del recorrido.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <div class="footer-logo-wrap">
+                    <img src="img/logo-mitre.png" alt="Ramal Zárate">
+                    <div class="footer-marca">Ramal Zárate</div>
+                </div>
+                <p>Centro de transporte ferroviario que conecta Retiro con el norte del Gran Buenos Aires.</p>
+            </div>
+            <div>
+                <h4>Información</h4>
+                <ul>
+                    <li><a href="estaciones.html">Horarios</a></li>
+                    <li><a href="estaciones.html">Ramales</a></li>
+                    <li><a href="ubicacion.html">Estaciones</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="tel:08002228736">0800-222-TREN</a></li>
+                    <li><a href="mailto:info@lineamitre.com">info@lineamitre.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-base">Línea Mitre — Centro de Transporte Ferroviario</div>
+    </footer>
+
+    <script src="JS/style.js"></script>
+</body>
+</html>

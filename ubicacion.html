@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estaciones y ubicación — Ramal Zárate</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <img src="img/logo-mitre.png" alt="Ramal Zárate" class="nav-logo">
+            <div class="marca">
+                Ramal Zárate
+                <small>Línea Mitre</small>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="estaciones.html">Horarios</a></li>
+                <li><a href="ubicacion.html">Estaciones</a></li>
+                <li id="nav-sube"><a href="sube.html">SUBE</a></li>
+                <li id="nav-central"><a href="https://rafaelmontanerpt.github.io/Central-de-transporte/index.html" target="_blank">← Línea Mitre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="ubicacion-hero" style="background-image:url('img/zarate-plaza.avif')">
+            <div class="ubicacion-hero-inner">
+                <h1>Estación Zárate</h1>
+                <p>Accesos, horarios, accesibilidad y todo lo que combina con esta estación.</p>
+            </div>
+        </section>
+
+        <section class="franja">
+            <span class="ojo">Buscar otra estación</span>
+            <input type="text" class="input-buscar" placeholder="Ej: Escobar, Retiro, Zárate..." oninput="buscarEstacion(this.value)">
+
+            <div class="fila-datos">
+                <div class="dato-mini"><span>Dirección</span><b>Justa Lima 200, Zárate</b></div>
+                <div class="dato-mini"><span>Horario</span><b>04:00 a 00:30</b></div>
+                <div class="dato-mini"><span>Estado</span><b style="color:var(--verde)">Servicio normal</b></div>
+            </div>
+        </section>
+
+        <section class="franja franja--ajustada">
+            <span class="ojo">Cómo llegar</span>
+            <h2>Mapa de la estación</h2>
+            <div class="mapa-caja">
+                <iframe src="https://maps.google.com/maps?q=Estaci%C3%B3n+Z%C3%A1rate+Tren+Mitre&output=embed"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <section class="franja franja--ajustada">
+            <span class="ojo">Accesibilidad</span>
+            <h2 style="margin-bottom:30px">Accesos para todos</h2>
+            <div class="lista-iconos">
+                <div class="item-icono">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="5" r="2"/><path d="M7 21l2-9 3 2 2-2 4 1M9 12l-2 5M5 21h6"/></svg>
+                    Rampas en ambos andenes
+                </div>
+                <div class="item-icono">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2" width="12" height="20" rx="1"/><path d="M9 8h6M9 12h6M9 16h6"/></svg>
+                    Ascensor a andenes
+                </div>
+                <div class="item-icono">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                    Baños accesibles
+                </div>
+                <div class="item-icono">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17h18M5 17V9l3-4h8l3 4v8"/></svg>
+                    Guías podotáctiles
+                </div>
+            </div>
+        </section>
+
+        <section class="franja franja--ajustada">
+            <span class="ojo">Combinaciones</span>
+            <h2 style="margin-bottom:30px">Conexiones desde acá</h2>
+            <div class="lista-iconos">
+                <div class="item-icono">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="11" rx="2"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg>
+                    Línea 60
+                </div>
+                <div class="item-icono">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="11" rx="2"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg>
+                    Línea 203
+                </div>
+                <div class="item-icono">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M3 17V8a2 2 0 0 1 2-2h7l4 5h3a2 2 0 0 1 2 2v4"/></svg>
+                    Parada de taxis
+                </div>
+                <div class="item-icono">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 18a3 3 0 1 0 6 0 3 3 0 1 0-6 0Zm8 0a3 3 0 1 0 6 0 3 3 0 1 0-6 0Z"/><path d="M11 18h2M8 18l3-9h3l3 5M8 9h6"/></svg>
+                    Bicicletas EcoBici
+                </div>
+            </div>
+        </section>
+
+        <section class="tira-conectividad">
+            <div class="franja franja--ajustada">
+                <span class="ojo">Cerca de la estación</span>
+                <h2 style="margin-bottom:30px">A pocos pasos</h2>
+                <div class="lista-iconos" style="background:transparent">
+                    <div class="item-icono">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h18l-1 4H4L3 8Zm1 4v8h16v-8"/></svg>
+                        Cafeterías
+                    </div>
+                    <div class="item-icono">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V8a8 8 0 0 1 16 0v13"/><path d="M4 14h16"/></svg>
+                        Farmacia
+                    </div>
+                    <div class="item-icono">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M8 14h2"/></svg>
+                        Cajero automático
+                    </div>
+                    <div class="item-icono">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                        Comisaría
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="franja franja--ajustada bloque-tabla">
+            <span class="ojo">En vivo</span>
+            <h2>Próximos trenes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Destino</th>
+                        <th>Hora</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Zárate</td>
+                        <td>14:32</td>
+                        <td><span class="badge-pico">En horario</span></td>
+                    </tr>
+                    <tr>
+                        <td>Retiro</td>
+                        <td>14:48</td>
+                        <td><span class="badge-valle">12 min</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <div class="footer-logo-wrap">
+                    <img src="img/logo-mitre.png" alt="Ramal Zárate">
+                    <div class="footer-marca">Ramal Zárate</div>
+                </div>
+                <p>Centro de transporte ferroviario que conecta Retiro con el norte del Gran Buenos Aires.</p>
+            </div>
+            <div>
+                <h4>Información</h4>
+                <ul>
+                    <li><a href="estaciones.html">Horarios</a></li>
+                    <li><a href="estaciones.html">Ramales</a></li>
+                    <li><a href="ubicacion.html">Estaciones</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="tel:08002228736">0800-222-TREN</a></li>
+                    <li><a href="mailto:info@lineamitre.com">info@lineamitre.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-base">Línea Mitre — Centro de Transporte Ferroviario</div>
+    </footer>
+
+    <script src="JS/style.js"></script>
+</body>
+</html>
